@@ -19,7 +19,7 @@
   }: Props = $props();
 
   let current = $state(0);
-  let timer: ReturnType<typeof setInterval> | undefined;
+  let paused = $state(false);
 
   function go(index: number) {
     current = (index + slides.length) % slides.length;
@@ -33,22 +33,15 @@
     go(current - 1);
   }
 
-  function startTimer() {
-    stopTimer();
-    // Reduzierte Bewegung respektieren: dann kein Auto-Wechsel.
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce || slides.length <= 1) return;
-    timer = setInterval(next, interval);
-  }
-
-  function stopTimer() {
-    if (timer) clearInterval(timer);
-    timer = undefined;
-  }
-
   $effect(() => {
-    startTimer();
-    return stopTimer;
+    const reduce =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (paused || reduce || slides.length <= 1) return;
+
+    const id = setInterval(next, interval);
+    return () => clearInterval(id);
   });
 </script>
 
@@ -57,10 +50,8 @@
   role="region"
   aria-roledescription="carousel"
   aria-label="Bildergalerie"
-  onmouseenter={stopTimer}
-  onmouseleave={startTimer}
-  onfocusin={stopTimer}
-  onfocusout={startTimer}
+  onmouseenter={() => (paused = true)}
+  onmouseleave={() => (paused = false)}
 >
   <div class="slider-track">
     {#each slides as slide, i (slide.src)}
