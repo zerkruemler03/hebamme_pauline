@@ -1,0 +1,23 @@
+---
+import { cn } from '../utils/cn';
+
+interface Props {
+  id?: string;
+  class?: string;
+  tone?: 'base' | 'secondary' | 'accent';
+}
+
+const { id, class: className, tone = 'base' } = Astro.props;
+
+const toneClass = {
+  base: '',
+  secondary: 'bg-[var(--color-bg-secondary)]',
+  accent: 'bg-[var(--color-accent-soft)]',
+}[tone];
+---
+
+<section id={id} class={cn('py-[var(--space-3xl)]', toneClass, className)}>
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <slot />
+  </div>
+</section>

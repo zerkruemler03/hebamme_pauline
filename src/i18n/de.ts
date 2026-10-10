@@ -1,0 +1,132 @@
+export const de = {
+  // --- Meta / allgemein ---
+  'site.name': 'Hebamme Pauline',
+  'site.tagline': 'Liebevolle Begleitung durch Schwangerschaft, Geburt und Wochenbett',
+  'lang.switch': 'English',
+  'lang.switch.aria': 'Switch to English',
+  'theme.toLight': 'Zum hellen Modus wechseln',
+  'theme.toDark': 'Zum dunklen Modus wechseln',
+  'nav.menu': 'Menü',
+  'nav.close': 'Menü schließen',
+
+  // --- Navigation ---
+  'nav.home': 'Startseite',
+  'nav.knowledge': 'Wissenswertes',
+  'nav.contact': 'Kontakt',
+
+  // --- Hero ---
+  'hero.title': 'Herzlich willkommen',
+  'hero.subtitle':
+    'Ich begleite dich einfühlsam und fachkundig durch eine der schönsten Zeiten deines Lebens – von der Schwangerschaft über die Geburt bis ins Wochenbett.',
+  'hero.cta.contact': 'Kontakt aufnehmen',
+  'hero.cta.knowledge': 'Wissenswertes',
+
+  // --- Slider ---
+  'slider.prev': 'Vorheriges Bild',
+  'slider.next': 'Nächstes Bild',
+  'slider.alt1': 'Schwangere Frau hält ihren Bauch',
+  'slider.alt2': 'Neugeborenes Baby schläft',
+  'slider.alt3': 'Mutter mit Baby im Arm',
+  'slider.alt4': 'Hebamme bei der Betreuung',
+
+  // --- Leistungen ---
+  'services.title': 'Meine Leistungen',
+  'services.subtitle': 'Begleitung in jeder Phase – ganz nach deinen Bedürfnissen.',
+  'services.pregnancy.title': 'Schwangerschaftsbetreuung',
+  'services.pregnancy.text':
+    'Vorsorgeuntersuchungen, Beratung und Beantwortung all deiner Fragen rund um die Schwangerschaft.',
+  'services.birth.title': 'Geburtsvorbereitung',
+  'services.birth.text':
+    'Gemeinsame Vorbereitung auf die Geburt, damit du gestärkt und zuversichtlich in diesen besonderen Moment gehst.',
+  'services.postnatal.title': 'Wochenbettbetreuung',
+  'services.postnatal.text':
+    'Hausbesuche nach der Geburt: Unterstützung bei Stillfragen, Rückbildung und der Pflege deines Babys.',
+  'services.counseling.title': 'Still- & Ernährungsberatung',
+  'services.counseling.text':
+    'Individuelle Beratung zum Stillen und zur Ernährung – für einen entspannten Start zu dritt.',
+
+  // --- Betreuungsgebiet ---
+  'area.title': 'Mein Betreuungsgebiet',
+  'area.text':
+    'Ich betreue werdende und frischgebackene Familien rund um Meuselwitz – unter anderem in Zeitz, Altenburg und Umgebung. Du bist dir nicht sicher, ob du im Gebiet liegst? Schreib mir einfach deine PLZ.',
+  'area.mapAlt': 'Karte des Betreuungsgebiets rund um Meuselwitz',
+
+  // --- Kontakt / Social ---
+  'contact.title': 'Lass uns in Kontakt treten',
+  'contact.text':
+    'Du hast Fragen oder möchtest einen Termin vereinbaren? Erreiche mich am einfachsten über WhatsApp oder Instagram.',
+  'contact.whatsapp': 'WhatsApp schreiben',
+  'contact.instagram': 'Instagram besuchen',
+  'contact.maps': 'Auf Google Maps bewerten',
+  'contact.consentHint':
+    'Hinweis: Beim Klick auf diese Buttons wirst du zu einem externen Dienst (Meta bzw. Google) weitergeleitet. Erst dann werden Daten an den jeweiligen Anbieter übertragen.',
+
+  // --- Wissenswertes ---
+  'knowledge.title': 'Wissenswertes',
+  'knowledge.subtitle': 'Wichtige Infos rund um die Hebammenbetreuung.',
+  'knowledge.wegegeld.title': 'Hebammen-Suche: Wie weit darf der Weg sein? 🚗💨',
+  'knowledge.wegegeld.intro':
+    'Du suchst eine Hebamme für die Wochenbettbetreuung, wohnst aber etwas außerhalb? Hier ein paar wichtige Informationen rund um das Wegegeld:',
+  'knowledge.wegegeld.b1.title': '📍 Bis 25 km',
+  'knowledge.wegegeld.b1.text':
+    'Bei gesetzlich Versicherten wird das Wegegeld grundsätzlich für eine einfache Wegstrecke von bis zu 25 km übernommen.',
+  'knowledge.wegegeld.b2.title': '🤔 Und wenn du weiter entfernt wohnst?',
+  'knowledge.wegegeld.b2.text':
+    'In bestimmten Ausnahmefällen kann das Wegegeld auch für eine längere Strecke bis maximal 50 km einfache Wegstrecke abgerechnet werden – zum Beispiel:',
+  'knowledge.wegegeld.b2.li1': 'wenn keine andere Hebamme verfügbar ist',
+  'knowledge.wegegeld.b2.li2': 'bei einem Vertretungsfall',
+  'knowledge.wegegeld.b2.note':
+    'Die Voraussetzungen für die Abrechnung der längeren Strecke müssen dabei erfüllt und entsprechend begründet werden.',
+  'knowledge.wegegeld.b3.title': '🏥 Du bist privat versichert?',
+  'knowledge.wegegeld.b3.text':
+    'Auch als Privatversicherte kannst du Hebammenhilfe in Anspruch nehmen. Die Kostenübernahme richtet sich nach deinem individuellen Versicherungsvertrag und -tarif. Bitte kläre daher am besten vor Beginn der Betreuung mit deiner privaten Krankenversicherung, welche Leistungen und Fahrtkosten übernommen werden.',
+  'knowledge.wegegeld.b4.title': '🗺️ Du bist unsicher, ob du in meinem Betreuungsgebiet liegst?',
+  'knowledge.wegegeld.b4.text':
+    'Schreib mir einfach deine PLZ oder deinen Wohnort, dann können wir gemeinsam schauen, ob eine Betreuung möglich ist. 🤗',
+  'knowledge.wegegeld.source':
+    'Quelle: Hebammenhilfevertrag nach § 134a SGB V, gültig ab dem 01.04.2026',
+
+  // --- Footer ---
+  'footer.contact': 'Kontakt',
+  'footer.social': 'Social Media',
+  'footer.legal': 'Rechtliches',
+  'footer.address': 'Adresse',
+  'footer.imprint': 'Impressum',
+  'footer.privacy': 'Datenschutzerklärung',
+  'footer.rights': 'Alle Rechte vorbehalten.',
+  'footer.mapsReview': 'Auf Google Maps bewerten',
+
+  // --- Impressum ---
+  'imprint.title': 'Impressum',
+  'imprint.tmg': 'Angaben gemäß § 5 TMG',
+  'imprint.contact': 'Kontakt',
+  'imprint.responsible': 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV',
+  'imprint.jobTitle': 'Berufsbezeichnung',
+  'imprint.jobTitleValue': 'Hebamme (verliehen in Deutschland)',
+  'imprint.disclaimer.title': 'Haftungsausschluss',
+  'imprint.disclaimer.text':
+    'Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.',
+
+  // --- Datenschutz ---
+  'privacy.title': 'Datenschutzerklärung',
+  'privacy.intro.title': 'Allgemeine Hinweise und Verantwortlicher',
+  'privacy.intro.text':
+    'Die folgenden Hinweise geben einen Überblick darüber, was mit personenbezogenen Daten geschieht, wenn diese Website genutzt wird. Personenbezogene Daten sind alle Daten, mit denen eine natürliche Person persönlich identifiziert werden kann. Verantwortlich für die Datenverarbeitung auf dieser Website ist die im Impressum genannte Stelle. Die Website ist bewusst datensparsam gestaltet; eine Übermittlung von Daten an externe soziale Netzwerke oder Kartendienste erfolgt nicht bereits durch den bloßen Aufruf der Website.',
+  'privacy.hosting.title': 'Hosting und Server-Logfiles',
+  'privacy.hosting.text':
+    'Beim Aufruf dieser Website verarbeitet der Hosting-Anbieter als Auftragsverarbeiter automatisch technisch notwendige Daten, die der Browser übermittelt und die in sogenannten Server-Logfiles gespeichert werden. Hierzu zählen insbesondere die IP-Adresse, Datum und Uhrzeit des Zugriffs, die angeforderte Datei sowie der verwendete Browser und das Betriebssystem. Rechtsgrundlage ist das berechtigte Interesse an einem technisch sicheren und stabilen Betrieb der Website gemäß Art. 6 Abs. 1 lit. f DSGVO. Eine darüber hinausgehende Speicherung oder Auswertung dieser Daten findet nicht statt.',
+  'privacy.meta.title': 'Verlinkung zu Diensten der Meta Platforms (Instagram und WhatsApp)',
+  'privacy.meta.text':
+    'Diese Website enthält Verlinkungen zu den Diensten Instagram und WhatsApp (Anbieter: Meta Platforms Ireland Ltd., 4 Grand Canal Square, Dublin 2, Irland). Es werden keine automatisch nachladenden Plug-ins oder Schaltflächen eingebunden. Eine Übermittlung personenbezogener Daten – insbesondere der IP-Adresse – an Meta erfolgt erst, wenn die jeweilige Schaltfläche aktiv angeklickt und der verlinkte Dienst aufgerufen wird. Auf Art und Umfang der anschließenden Datenverarbeitung durch Meta besteht kein Einfluss. Nähere Informationen sind der Datenschutzerklärung von Meta zu entnehmen.',
+  'privacy.google.title': 'Verlinkung zu Google Maps',
+  'privacy.google.text':
+    'Diese Website verlinkt auf den Kartendienst Google Maps (Anbieter: Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland), insbesondere zur Darstellung des Betreuungsgebiets sowie zur Möglichkeit der Abgabe einer Bewertung. Eine Karte wird nicht unmittelbar in die Website eingebettet. Eine Übermittlung personenbezogener Daten an Google erfolgt erst, wenn der entsprechende Link bzw. das Google-Maps-Symbol aktiv angeklickt und der Dienst aufgerufen wird. Nähere Informationen sind der Datenschutzerklärung von Google zu entnehmen.',
+  'privacy.rights.title': 'Rechte der betroffenen Person',
+  'privacy.rights.text':
+    'Über diese Website werden durch den Verantwortlichen selbst keine personenbezogenen Daten erhoben oder gespeichert; eine Verarbeitung erfolgt ausschließlich im Rahmen der technisch notwendigen Server-Logfiles des Hosting-Anbieters. Soweit personenbezogene Daten verarbeitet werden, bestehen gegenüber dem Verantwortlichen die Rechte auf Auskunft (Art. 15 DSGVO), auf Berichtigung (Art. 16 DSGVO), auf Löschung (Art. 17 DSGVO) sowie auf Einschränkung der Verarbeitung (Art. 18 DSGVO), soweit die gesetzlichen Voraussetzungen hierfür vorliegen. Darüber hinaus besteht gemäß Art. 77 DSGVO ein Beschwerderecht bei der zuständigen Datenschutz-Aufsichtsbehörde. Zur Ausübung dieser Rechte kann der Verantwortliche über die im Impressum genannten Kontaktdaten kontaktiert werden.',
+
+  // --- 404 ---
+  'notfound.title': 'Seite nicht gefunden',
+  'notfound.text': 'Diese Seite gibt es leider nicht. Vielleicht findest du sie über die Startseite.',
+  'notfound.cta': 'Zur Startseite',
+} as const;

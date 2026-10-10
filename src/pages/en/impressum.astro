@@ -1,0 +1,11 @@
+---
+import ImprintContent from '../../components/ImprintContent.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<BaseLayout title={t('imprint.title')}>
+  <ImprintContent locale="en" />
+</BaseLayout>

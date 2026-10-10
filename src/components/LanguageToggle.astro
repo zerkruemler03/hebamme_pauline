@@ -1,0 +1,78 @@
+---
+import { getLocaleFromPath, switchLocalePath, useTranslations } from '../i18n/utils';
+
+const currentPath = Astro.url.pathname;
+const locale = getLocaleFromPath(currentPath);
+const t = useTranslations(locale);
+const targetLocale = locale === 'de' ? 'en' : 'de';
+const targetPath = switchLocalePath(currentPath, targetLocale);
+---
+
+<a
+  href={targetPath}
+  class="lang-toggle"
+  hreflang={targetLocale}
+  aria-label={t('lang.switch.aria')}
+  data-set-lang={targetLocale}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z" />
+  </svg>
+  <span>{t('lang.switch')}</span>
+</a>
+
+<script>
+  // Merkt die manuell gewaehlte Sprache, damit der Auto-Redirect sie respektiert.
+  document.querySelectorAll<HTMLAnchorElement>('a[data-set-lang]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const lang = link.dataset.setLang;
+      if (lang) {
+        try {
+          localStorage.setItem('preferred-lang', lang);
+        } catch {
+          /* ignore */
+        }
+        document.cookie = `preferred-lang=${lang}; path=/; max-age=31536000; SameSite=Lax`;
+      }
+    });
+  });
+</script>
+
+<style>
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 2.5rem;
+    padding: 0 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      background-color var(--transition-fast),
+      border-color var(--transition-fast),
+      color var(--transition-fast);
+  }
+
+  .lang-toggle:hover {
+    background: var(--color-accent-soft);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+</style>

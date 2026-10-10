@@ -1,0 +1,11 @@
+---
+import KnowledgeContent from '../../components/KnowledgeContent.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<BaseLayout title={t('knowledge.title')} description={t('knowledge.subtitle')}>
+  <KnowledgeContent locale="en" />
+</BaseLayout>

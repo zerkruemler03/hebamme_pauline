@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Platzhalter Betreuung">
+  <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#efe0ea"/><stop offset="1" stop-color="#d8bccb"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#g4)"/>
+  <rect x="620" y="330" width="360" height="220" rx="40" fill="#ffffff" opacity="0.5"/>
+  <circle cx="800" cy="440" r="80" fill="#b57a93" opacity="0.5"/>
+  <text x="800" y="760" font-family="Georgia, serif" font-size="46" fill="#7a4e63" text-anchor="middle">Platzhalter · Betreuung</text>
+  <text x="800" y="815" font-family="sans-serif" font-size="26" fill="#9a6a82" text-anchor="middle">Bitte durch echtes Foto ersetzen</text>
+</svg>

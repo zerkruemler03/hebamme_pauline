@@ -1,0 +1,11 @@
+---
+import PrivacyContent from '../components/PrivacyContent.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('de');
+---
+
+<BaseLayout title={t('privacy.title')}>
+  <PrivacyContent locale="de" />
+</BaseLayout>

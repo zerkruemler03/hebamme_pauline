@@ -1,0 +1,45 @@
+---
+import { site } from '../data/site';
+import { useTranslations, type Locale } from '../i18n/utils';
+import Section from './Section.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const c = site.contact;
+---
+
+<Section>
+  <article class="prose-page mx-auto max-w-2xl">
+    <h1 class="text-4xl">{t('imprint.title')}</h1>
+
+    <h2>{t('imprint.tmg')}</h2>
+    <p>
+      {c.name}<br />
+      {c.street}<br />
+      {c.zip}&nbsp;{c.city}<br />
+      {c.country}
+    </p>
+
+    <h2>{t('imprint.contact')}</h2>
+    <p>
+      {locale === 'de' ? 'Telefon' : 'Phone'}: <a href={`tel:${c.phoneLink}`}>{c.phone}</a><br />
+      {locale === 'de' ? 'E-Mail' : 'E-mail'}: <a href={`mailto:${c.email}`}>{c.email}</a>
+    </p>
+
+    <h2>{t('imprint.jobTitle')}</h2>
+    <p>{t('imprint.jobTitleValue')}</p>
+
+    <h2>{t('imprint.responsible')}</h2>
+    <p>
+      {c.name}<br />
+      {c.street}, {c.zip}&nbsp;{c.city}
+    </p>
+
+    <h2>{t('imprint.disclaimer.title')}</h2>
+    <p>{t('imprint.disclaimer.text')}</p>
+  </article>
+</Section>

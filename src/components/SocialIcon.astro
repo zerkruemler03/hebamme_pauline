@@ -1,0 +1,132 @@
+---
+import { cn } from '../utils/cn';
+import Icon from './Icon.astro';
+
+type Platform = 'instagram' | 'whatsapp' | 'maps';
+
+interface Props {
+  platform: Platform;
+  href: string;
+  label: string;
+  class?: string;
+  variant?: 'icon' | 'button';
+}
+
+const { platform, href, label, class: className, variant = 'icon' } = Astro.props;
+
+const brand: Record<Platform, string> = {
+  instagram: '#E1306C',
+  whatsapp: '#25D366',
+  maps: '#4285F4',
+};
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={label}
+  title={label}
+  data-platform={platform}
+  class={cn(
+    'social-link group',
+    variant === 'icon' ? 'social-link--icon' : 'social-link--button',
+    className
+  )}
+  style={`--brand:${brand[platform]}`}
+>
+  <span class="social-icon" aria-hidden="true">
+    {
+      platform === 'instagram' && (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+          <path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86 0 3.2 0 3.58-.07 4.85-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07-3.2 0-3.58 0-4.85-.07-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12c0-3.2 0-3.58.07-4.85.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.38.19-1.7.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.8-.32 1.7-.06 1.24-.07 1.6-.07 4.76 0 3.15.01 3.52.07 4.76.04.9.19 1.38.32 1.7.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.8.28 1.7.32 1.24.06 1.6.07 4.76.07 3.15 0 3.52-.01 4.76-.07.9-.04 1.38-.19 1.7-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.8.32-1.7.06-1.24.07-1.6.07-4.76 0-3.15-.01-3.52-.07-4.76-.04-.9-.19-1.38-.32-1.7a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.8-.28-1.7-.32-1.24-.06-1.6-.07-4.76-.07Zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88Zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28Zm5.15-1.15a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z" />
+        </svg>
+      )
+    }
+    {
+      platform === 'whatsapp' && (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8a8.08 8.08 0 0 1 5.73 2.38 8.07 8.07 0 0 1 2.38 5.73c0 4.47-3.64 8.11-8.11 8.11a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.11.82.83-3.04-.19-.31a8.05 8.05 0 0 1-1.24-4.27c0-4.47 3.64-8.1 8.11-8.1l-.01-.01h.37ZM8.53 7.33c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.76 2.8 4.37 3.82 2.17.85 2.61.68 3.08.64.47-.04 1.52-.62 1.74-1.22.21-.6.21-1.11.15-1.22-.06-.1-.23-.17-.48-.29-.25-.13-1.52-.75-1.75-.84-.23-.08-.4-.12-.57.13-.17.25-.65.84-.8 1.01-.15.17-.29.19-.54.06-.25-.13-1.08-.4-2.05-1.27-.76-.68-1.27-1.51-1.42-1.76-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.38-.78-1.88-.2-.47-.4-.4-.56-.41h-.47Z" />
+        </svg>
+      )
+    }
+    {
+      platform === 'maps' && (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+          <path d="M12 2a7 7 0 0 0-7 7c0 4.5 6.1 12.3 6.36 12.63a.8.8 0 0 0 1.28 0C13.9 21.3 20 13.5 20 9a7 7 0 0 0-8-7Zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2Z" />
+        </svg>
+      )
+    }
+  </span>
+  {
+    variant === 'button' && (
+      <>
+        <span class="social-text">{label}</span>
+        <Icon name="arrow-up-right" class="external-arrow" />
+      </>
+    )
+  }
+</a>
+
+<style>
+  .social-link {
+    text-decoration: none;
+    color: var(--color-text);
+    transition:
+      transform var(--transition-fast),
+      background-color var(--transition-fast),
+      border-color var(--transition-fast),
+      color var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+
+  /* Variante: rundes Icon */
+  .social-link--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+  }
+
+  .social-link--icon:hover {
+    color: var(--brand);
+    border-color: var(--brand);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Variante: Button mit Text */
+  .social-link--button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    font-weight: 600;
+  }
+
+  .social-link--button:hover {
+    color: var(--brand);
+    border-color: var(--brand);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .social-icon {
+    display: inline-flex;
+  }
+
+  .external-arrow {
+    transition: transform var(--transition-fast);
+  }
+
+  .social-link--button:hover .external-arrow {
+    transform: translate(2px, -2px);
+  }
+</style>

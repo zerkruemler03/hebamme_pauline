@@ -1,0 +1,167 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import { getLocaleFromPath, localePath, useTranslations } from '../i18n/utils';
+import { cn } from '../utils/cn';
+import LanguageToggle from './LanguageToggle.astro';
+import ThemeToggle from './ThemeToggle.svelte';
+
+const currentPath = Astro.url.pathname;
+const locale = getLocaleFromPath(currentPath);
+const t = useTranslations(locale);
+
+const links = [
+  { href: localePath('/', locale), label: t('nav.home') },
+  { href: localePath('/wissenswertes', locale), label: t('nav.knowledge') },
+];
+
+function normalize(path: string): string {
+  if (path === '/') return '/';
+  return path.endsWith('/') ? path.slice(0, -1) : path;
+}
+
+const isActive = (href: string) => normalize(currentPath) === normalize(href);
+---
+
+<header
+  class="sticky top-0 z-[var(--z-sticky)] border-b border-[var(--color-border)] bg-[var(--color-surface)] backdrop-blur-md"
+>
+  <nav aria-label={t('nav.menu')} class="mx-auto flex h-[var(--nav-height)] max-w-6xl items-center gap-4 px-4 sm:px-6">
+    <!-- Logo -->
+    <a href={localePath('/', locale)} class="flex items-center gap-2.5 no-underline">
+      <Image
+        src={logo}
+        alt=""
+        width={44}
+        height={52}
+        class="h-11 w-auto"
+        loading="eager"
+      />
+      <span class="font-[var(--font-serif)] text-lg font-semibold text-[var(--color-text)] sm:text-xl">
+        {t('site.name')}
+      </span>
+    </a>
+
+    <!-- Desktop-Navigation (mittig) -->
+    <ul class="ml-auto hidden items-center gap-1 md:flex" role="list">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+              class={cn(
+                'rounded-full px-4 py-2 text-sm font-semibold no-underline transition-colors',
+                isActive(link.href)
+                  ? 'bg-[var(--color-accent-soft)] text-[var(--color-accent)]'
+                  : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-text)]'
+              )}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Toggles (Desktop) -->
+    <div class="ml-2 hidden items-center gap-2 md:flex">
+      <LanguageToggle />
+      <ThemeToggle
+        client:load
+        labelDark={t('theme.toDark')}
+        labelLight={t('theme.toLight')}
+      />
+    </div>
+
+    <!-- Mobile: Toggles + Burger -->
+    <div class="ml-auto flex items-center gap-2 md:hidden">
+      <ThemeToggle
+        client:load
+        labelDark={t('theme.toDark')}
+        labelLight={t('theme.toLight')}
+      />
+      <button
+        type="button"
+        id="nav-burger"
+        class="burger"
+        aria-label={t('nav.menu')}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile-Menu (ausklappbar) -->
+  <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
+    <ul class="flex flex-col gap-1 px-4 py-4" role="list">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+              class={cn(
+                'block rounded-lg px-4 py-3 text-base font-semibold no-underline transition-colors',
+                isActive(link.href)
+                  ? 'bg-[var(--color-accent-soft)] text-[var(--color-accent)]'
+                  : 'text-[var(--color-text)] hover:bg-[var(--color-bg-secondary)]'
+              )}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li class="mt-2 border-t border-[var(--color-border)] pt-3">
+        <LanguageToggle />
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const burger = document.getElementById('nav-burger');
+  const menu = document.getElementById('mobile-menu');
+
+  if (burger && menu) {
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      menu.hidden = open;
+    });
+  }
+</script>
+
+<style>
+  .burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+
+  .burger:hover {
+    background: var(--color-accent-soft);
+    border-color: var(--color-accent);
+  }
+
+  .mobile-menu {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+    backdrop-filter: blur(12px);
+  }
+</style>

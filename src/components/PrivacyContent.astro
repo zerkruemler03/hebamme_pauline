@@ -1,0 +1,32 @@
+---
+import { useTranslations, type Locale } from '../i18n/utils';
+import Section from './Section.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<Section>
+  <article class="prose-page mx-auto max-w-2xl">
+    <h1 class="text-4xl">{t('privacy.title')}</h1>
+
+    <h2>{t('privacy.intro.title')}</h2>
+    <p>{t('privacy.intro.text')}</p>
+
+    <h2>{t('privacy.hosting.title')}</h2>
+    <p>{t('privacy.hosting.text')}</p>
+
+    <h2>{t('privacy.meta.title')}</h2>
+    <p>{t('privacy.meta.text')}</p>
+
+    <h2>{t('privacy.google.title')}</h2>
+    <p>{t('privacy.google.text')}</p>
+
+    <h2>{t('privacy.rights.title')}</h2>
+    <p>{t('privacy.rights.text')}</p>
+  </article>
+</Section>

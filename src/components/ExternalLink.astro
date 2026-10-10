@@ -1,0 +1,50 @@
+---
+import { cn } from '../utils/cn';
+import Icon from './Icon.astro';
+
+interface Props {
+  href: string;
+  class?: string;
+  showArrow?: boolean;
+}
+
+const { href, class: className, showArrow = true } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={cn('external-link inline-flex items-center gap-1', className)}
+>
+  <slot />
+  {showArrow && <Icon name="arrow-up-right" class="external-arrow" />}
+  <span class="sr-only"> (öffnet in neuem Tab)</span>
+</a>
+
+<style>
+  .external-link {
+    text-underline-offset: 3px;
+  }
+
+  .external-arrow {
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
+  }
+
+  .external-link:hover .external-arrow {
+    transform: translate(2px, -2px);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
