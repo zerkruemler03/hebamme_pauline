@@ -24,11 +24,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # Exakte Version aus .nvmrc – haelt CI und lokale Umgebung identisch
+          # und vermeidet den sporadischen npm-10.9.x-Bug "Exit handler never called!".
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install dependencies
-        run: npm ci --registry=https://registry.npmjs.org/
+        # Registry kommt aus der committeten .npmrc (oeffentliche npm-Registry).
+        # Kein --registry-Flag: in Kombination mit npm 10.9.x ein bekannter Ausloeser
+        # fuer "Exit handler never called!". Ein Retry faengt sporadische Fehler ab.
+        run: npm ci || (echo "npm ci retry" && npm cache clean --force && npm ci)
 
       - name: Build site
         run: npm run build
