@@ -21,22 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          # Exakte Version aus .nvmrc – haelt CI und lokale Umgebung identisch
-          # und vermeidet den sporadischen npm-10.9.x-Bug "Exit handler never called!".
           node-version-file: .nvmrc
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
-        # Registry kommt aus der committeten .npmrc (oeffentliche npm-Registry).
-        # Kein --registry-Flag: in Kombination mit npm 10.9.x ein bekannter Ausloeser
-        # fuer "Exit handler never called!". Ein Retry faengt sporadische Fehler ab.
-        run: npm ci || (echo "npm ci retry" && npm cache clean --force && npm ci)
+        run: pnpm install --frozen-lockfile
 
       - name: Build site
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
