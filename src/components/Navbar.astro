@@ -27,7 +27,6 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
   class="sticky top-0 z-[var(--z-sticky)] border-b border-[var(--color-border)] bg-[var(--color-surface)] backdrop-blur-md"
 >
   <nav aria-label={t('nav.menu')} class="mx-auto flex h-[var(--nav-height)] max-w-6xl items-center gap-4 px-4 sm:px-6">
-    <!-- Logo -->
     <a href={localePath('/', locale)} class="flex items-center gap-2.5 no-underline">
       <Image
         src={logo}
@@ -42,7 +41,6 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
       </span>
     </a>
 
-    <!-- Desktop-Navigation (mittig) -->
     <ul class="ml-auto hidden items-center gap-1 md:flex" role="list">
       {
         links.map((link) => (
@@ -74,7 +72,6 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
       />
     </div>
 
-    <!-- Mobile: Toggles + Burger -->
     <div class="ml-auto flex items-center gap-2 md:hidden">
       <ThemeToggle
         client:load
@@ -96,7 +93,6 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
     </div>
   </nav>
 
-  <!-- Mobile-Menu (ausklappbar) -->
   <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
     <ul class="flex flex-col gap-1 px-4 py-4" role="list">
       {

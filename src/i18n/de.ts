@@ -1,6 +1,6 @@
 export const de = {
   // --- Meta / allgemein ---
-  'site.name': 'Hebamme Pauline',
+  'site.name': 'Hebamme Pauline Salva',
   'site.tagline': 'Liebevolle Begleitung durch Schwangerschaft, Geburt und Wochenbett',
   'lang.switch': 'English',
   'lang.switch.aria': 'Switch to English',
@@ -59,7 +59,7 @@ export const de = {
   'contact.instagram': 'Instagram besuchen',
   'contact.maps': 'Auf Google Maps bewerten',
   'contact.consentHint':
-    'Hinweis: Bei Klick auf der Karte wirst du zu einem externen Dienst (Meta bzw. Google) weitergeleitet. Erst dann werden Daten an den jeweiligen Anbieter übertragen.',
+    'Hinweis: Beim Klick auf diese Buttons wirst du zu einem externen Dienst (Meta bzw. Google) weitergeleitet. Erst dann werden Daten an den jeweiligen Anbieter übertragen.',
 
   // --- Wissenswertes ---
   'knowledge.eyebrow': 'Ratgeber',

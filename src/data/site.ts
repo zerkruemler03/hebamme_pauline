@@ -1,7 +1,3 @@
-/**
- * Zentrale Konfiguration für Kontaktdaten und externe Links.
- */
-
 export const site = {
   url: 'https://hebamme-pauline.de',
 
@@ -31,10 +27,6 @@ export const site = {
     },
   },
 
-  /**
-   * Zustaendige Aufsichtsbehoerde (Pflichtangabe fuer Heilberufe im Impressum).
-   * Quelle: gezielte Recherche "Gesundheitsamt Meuselwitz" (Stand 2026-10).
-   */
   supervisoryAuthority: {
     name: 'Gesundheitsamt Altenburger Land (Fachdienst Gesundheit des Landratsamtes)',
     street: 'Lindenaustraße 31',

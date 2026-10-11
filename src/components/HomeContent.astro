@@ -35,7 +35,6 @@ const services = [
 ];
 ---
 
-<!-- Hero -->
 <section class="relative overflow-hidden">
   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[var(--color-accent-soft)] to-transparent opacity-70"></div>
   <div class="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-4 py-[var(--space-3xl)] text-center sm:px-6">
@@ -47,7 +46,6 @@ const services = [
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="#kontakt" class="btn-primary">{t('hero.cta.contact')}</a>
     </div>
-    <!-- Social-Icons oben -->
     <div class="flex items-center gap-3 pt-2">
       <SocialIcon platform="instagram" href={site.instagramUrl} label={t('contact.instagram')} />
       <SocialIcon platform="whatsapp" href={site.whatsappUrl} label={t('contact.whatsapp')} />
@@ -55,7 +53,6 @@ const services = [
   </div>
 </section>
 
-<!-- Bild-Slider -->
 <Section class="!pt-0">
   <ImageSlider
     client:visible
@@ -66,7 +63,6 @@ const services = [
   />
 </Section>
 
-<!-- Leistungen -->
 <Section id="leistungen" tone="secondary">
   <div class="mb-12 text-center">
     <h2 class="text-3xl sm:text-4xl">{t('services.title')}</h2>
@@ -84,7 +80,6 @@ const services = [
   </div>
 </Section>
 
-<!-- Betreuungsgebiet -->
 <Section id="gebiet">
   <div class="grid items-center gap-10 md:grid-cols-2">
     <div>
@@ -104,7 +99,6 @@ const services = [
   </div>
 </Section>
 
-<!-- Kontakt / Social -->
 <Section id="kontakt" tone="accent">
   <div class="mx-auto max-w-2xl text-center">
     <h2 class="text-3xl sm:text-4xl">{t('contact.title')}</h2>

@@ -118,14 +118,34 @@
   box-shadow: var(--shadow-md);
 }
 
-.social-glyph {
+/* Icon.astro rendert <span class="…"> mit dem SVG darin.
+   Die Spans als inline-flex, damit das SVG sauber sitzt. */
+.social-glyph,
+.external-arrow,
+.footer-arrow {
+  display: inline-flex;
   flex-shrink: 0;
 }
 
-/* Pfeil-Icon externer Links (gemeinsame Hover-Animation) */
+/* Markenlogos im Social-Icon: einheitliche Groesse. */
+.social-glyph svg {
+  width: 1.375rem; /* 22px */
+  height: 1.375rem;
+}
+
+/* Pfeil-Icon externer Links (gemeinsame Hover-Animation). */
 .external-arrow {
-  flex-shrink: 0;
   transition: transform var(--transition-fast);
+}
+
+.external-arrow svg {
+  width: 0.875rem; /* 14px */
+  height: 0.875rem;
+}
+
+.footer-arrow svg {
+  width: 0.8125rem; /* 13px */
+  height: 0.8125rem;
 }
 
 .social-link--button:hover .external-arrow {

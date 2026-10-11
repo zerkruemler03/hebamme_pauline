@@ -2,7 +2,7 @@ import type { de } from './de';
 
 export const en: Record<keyof typeof de, string> = {
   // --- Meta / general ---
-  'site.name': 'Midwife Pauline',
+  'site.name': 'Midwife Pauline Salva',
   'site.tagline': 'Caring support through pregnancy, birth and the postnatal period',
   'lang.switch': 'Deutsch',
   'lang.switch.aria': 'Zu Deutsch wechseln',
@@ -61,7 +61,7 @@ export const en: Record<keyof typeof de, string> = {
   'contact.instagram': 'Visit Instagram',
   'contact.maps': 'Review on Google Maps',
   'contact.consentHint':
-    'Note: Clicking the map takes you to an external service (Meta or Google). Only then is data transferred to the respective provider.',
+    'Note: Clicking these buttons takes you to an external service (Meta or Google). Only then is data transferred to the respective provider.',
 
   // --- Good to know ---
   'knowledge.eyebrow': 'Guide',

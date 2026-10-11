@@ -7,16 +7,13 @@ type Platform = 'instagram' | 'whatsapp' | 'maps';
 interface Props {
   platform: Platform;
   href: string;
-  /** Zugaengliche Beschriftung (lokalisiert). */
   label: string;
   class?: string;
-  /** Darstellungsvariante: nur Icon (rund) oder Icon + Text (Button). */
   variant?: 'icon' | 'button';
 }
 
 const { platform, href, label, class: className, variant = 'icon' } = Astro.props;
 
-// Markenfarbe (Hover) + passender Icon-Name pro Plattform.
 const config: Record<Platform, { brand: string; icon: IconName }> = {
   instagram: { brand: '#E1306C', icon: 'instagram' },
   whatsapp: { brand: '#25D366', icon: 'whatsapp' },
@@ -40,7 +37,7 @@ const { brand, icon } = config[platform];
   )}
   style={`--brand:${brand}`}
 >
-  <Icon name={icon} size={22} class="social-glyph" />
+  <Icon name={icon} class="social-glyph" />
   {
     variant === 'button' && (
       <>

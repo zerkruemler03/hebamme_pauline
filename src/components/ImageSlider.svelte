@@ -1,4 +1,6 @@
 <script lang="ts">
+  import SvgIcon from './SvgIcon.svelte';
+
   interface Slide {
     src: string;
     alt: string;
@@ -68,14 +70,10 @@
 
   {#if slides.length > 1}
     <button type="button" class="arrow arrow-left" onclick={prev} aria-label={labelPrev}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="m15 18-6-6 6-6" />
-      </svg>
+      <SvgIcon name="chevron-left" />
     </button>
     <button type="button" class="arrow arrow-right" onclick={next} aria-label={labelNext}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="m9 18 6-6-6-6" />
-      </svg>
+      <SvgIcon name="chevron-right" />
     </button>
 
     <div class="dots">

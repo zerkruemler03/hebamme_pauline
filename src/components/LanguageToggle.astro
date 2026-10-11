@@ -34,7 +34,6 @@ const targetPath = switchLocalePath(currentPath, targetLocale);
 </a>
 
 <script>
-  // Merkt die manuell gewaehlte Sprache, damit der Auto-Redirect sie respektiert.
   document.querySelectorAll<HTMLAnchorElement>('a[data-set-lang]').forEach((link) => {
     link.addEventListener('click', () => {
       const lang = link.dataset.setLang;
