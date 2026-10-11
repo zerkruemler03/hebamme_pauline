@@ -94,11 +94,6 @@ export const en: Record<keyof typeof de, string> = {
     'Simply send me your postal code or your place of residence – together we can then check whether care is possible.',
   'knowledge.wegegeld.source':
     'Source: Midwifery care agreement under § 134a SGB V, valid from 1 April 2026.',
-  'knowledge.map.label': 'Service area',
-  'knowledge.map.title': 'My service area at a glance',
-  'knowledge.map.text':
-    'The highlighted area around Meuselwitz shows where I accompany expectant and new families.',
-  'knowledge.map.cta': 'Open in Google Maps',
 
   // --- Footer ---
   'footer.contact': 'Contact',
@@ -112,11 +107,19 @@ export const en: Record<keyof typeof de, string> = {
 
   // --- Imprint ---
   'imprint.title': 'Imprint',
-  'imprint.tmg': 'Information according to § 5 TMG',
+  'imprint.tmg': 'Provider',
   'imprint.contact': 'Contact',
-  'imprint.responsible': 'Responsible for the content according to § 55 (2) RStV',
+  'imprint.responsible': 'Responsible for the content',
+  'imprint.profession.title': 'Professional title and professional regulations',
   'imprint.jobTitle': 'Professional title',
-  'imprint.jobTitleValue': 'Midwife (awarded in Germany)',
+  'imprint.jobTitleValue': 'Midwife (awarded in the Federal Republic of Germany)',
+  'imprint.authority.title': 'Competent supervisory authority',
+  'imprint.rules.title': 'Professional regulations',
+  'imprint.rules.li1': 'Midwifery Act (Hebammengesetz, HebG)',
+  'imprint.rules.li2': 'Study and Examination Regulations for Midwives (HebStPrV)',
+  'imprint.rules.li3': 'Professional Code for Midwives of the Free State of Thuringia (ThürHebBO)',
+  'imprint.rules.note':
+    'The professional regulations can be viewed online at gesetze-im-internet.de and in the Thuringian State Gazette.',
   'imprint.disclaimer.title': 'Disclaimer',
   'imprint.disclaimer.text':
     'The contents of these pages were created with the greatest care. However, no guarantee can be given for the accuracy, completeness and timeliness of the content. The operators of external links are solely responsible for their content.',

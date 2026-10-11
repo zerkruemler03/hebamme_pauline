@@ -96,12 +96,6 @@ export const de = {
     'Senden Sie mir einfach Ihre Postleitzahl oder Ihren Wohnort – gemeinsam schauen wir dann, ob eine Betreuung möglich ist.',
   'knowledge.wegegeld.source':
     'Quelle: Hebammenhilfevertrag nach § 134a SGB V, gültig ab dem 1. April 2026.',
-  // Karten-Abschnitt
-  'knowledge.map.label': 'Betreuungsgebiet',
-  'knowledge.map.title': 'Mein Betreuungsgebiet auf einen Blick',
-  'knowledge.map.text':
-    'Das markierte Gebiet rund um Meuselwitz zeigt, wo ich werdende und frischgebackene Familien begleite.',
-  'knowledge.map.cta': 'In Google Maps öffnen',
 
   // --- Footer ---
   'footer.contact': 'Kontakt',
@@ -115,11 +109,19 @@ export const de = {
 
   // --- Impressum ---
   'imprint.title': 'Impressum',
-  'imprint.tmg': 'Angaben gemäß § 5 TMG',
+  'imprint.tmg': 'Anbieterin',
   'imprint.contact': 'Kontakt',
-  'imprint.responsible': 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV',
+  'imprint.responsible': 'Inhaltlich verantwortlich',
+  'imprint.profession.title': 'Berufsbezeichnung und berufsrechtliche Regelungen',
   'imprint.jobTitle': 'Berufsbezeichnung',
-  'imprint.jobTitleValue': 'Hebamme (verliehen in Deutschland)',
+  'imprint.jobTitleValue': 'Hebamme (verliehen in der Bundesrepublik Deutschland)',
+  'imprint.authority.title': 'Zuständige Aufsichtsbehörde',
+  'imprint.rules.title': 'Berufsrechtliche Regelungen',
+  'imprint.rules.li1': 'Hebammengesetz (HebG)',
+  'imprint.rules.li2': 'Studien- und Prüfungsverordnung für Hebammen (HebStPrV)',
+  'imprint.rules.li3': 'Berufsordnung für Hebammen des Freistaates Thüringen (ThürHebBO)',
+  'imprint.rules.note':
+    'Die berufsrechtlichen Regelungen sind online einsehbar unter gesetze-im-internet.de sowie im Thüringer Staatsanzeiger.',
   'imprint.disclaimer.title': 'Haftungsausschluss',
   'imprint.disclaimer.text':
     'Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.',

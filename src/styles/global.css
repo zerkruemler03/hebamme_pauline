@@ -203,9 +203,30 @@
   font-size: 1.35rem;
 }
 
+.prose-page h3 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+  font-size: 1.1rem;
+}
+
 .prose-page p {
   color: var(--color-text-secondary);
   margin-bottom: var(--space-md);
+}
+
+.prose-page ul {
+  margin: 0 0 var(--space-md);
+  padding-left: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.prose-page li {
+  list-style: disc;
+  margin-bottom: 0.25rem;
+}
+
+.prose-page strong {
+  color: var(--color-text);
 }
 
 .prose-page a {

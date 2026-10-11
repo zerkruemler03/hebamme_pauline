@@ -1,7 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import karte from '../assets/karte.png';
-import { site } from '../data/site';
 import { useTranslations, type Locale } from '../i18n/utils';
 
 interface Props {
@@ -111,30 +108,4 @@ const sections = [
       <p>{t('knowledge.wegegeld.source')}</p>
     </footer>
   </div>
-
-  <aside class="kn-map-band">
-    <div class="kn-container kn-map-grid">
-      <div>
-        <p class="kn-label">{t('knowledge.map.label')}</p>
-        <h2 class="kn-h3">{t('knowledge.map.title')}</h2>
-        <p class="kn-map-text">{t('knowledge.map.text')}</p>
-        <p class="kn-consent">{t('contact.consentHint')}</p>
-      </div>
-      <a
-        href={site.mapsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="kn-map-figure"
-        aria-label={t('knowledge.map.cta')}
-      >
-        <Image
-          src={karte}
-          alt={t('area.mapAlt')}
-          width={880}
-          height={919}
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </aside>
 </article>

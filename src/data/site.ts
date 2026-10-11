@@ -30,4 +30,17 @@ export const site = {
       return '+491738023998';
     },
   },
+
+  /**
+   * Zustaendige Aufsichtsbehoerde (Pflichtangabe fuer Heilberufe im Impressum).
+   * Quelle: gezielte Recherche "Gesundheitsamt Meuselwitz" (Stand 2026-10).
+   */
+  supervisoryAuthority: {
+    name: 'Gesundheitsamt Altenburger Land (Fachdienst Gesundheit des Landratsamtes)',
+    street: 'Lindenaustraße 31',
+    zip: '04600',
+    city: 'Altenburg',
+    phone: '+49 3447 586-822',
+    email: 'gesundheit@altenburgerland.de',
+  },
 } as const;

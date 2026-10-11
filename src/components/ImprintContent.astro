@@ -10,6 +10,8 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 const c = site.contact;
+const a = site.supervisoryAuthority;
+const isDe = locale === 'de';
 ---
 
 <Section>
@@ -26,17 +28,38 @@ const c = site.contact;
 
     <h2>{t('imprint.contact')}</h2>
     <p>
-      {locale === 'de' ? 'Telefon' : 'Phone'}: <a href={`tel:${c.phoneLink}`}>{c.phone}</a><br />
-      {locale === 'de' ? 'E-Mail' : 'E-mail'}: <a href={`mailto:${c.email}`}>{c.email}</a>
+      {isDe ? 'Telefon' : 'Phone'}: <a href={`tel:${c.phoneLink}`}>{c.phone}</a><br />
+      {isDe ? 'E-Mail' : 'E-mail'}: <a href={`mailto:${c.email}`}>{c.email}</a>
     </p>
 
-    <h2>{t('imprint.jobTitle')}</h2>
-    <p>{t('imprint.jobTitleValue')}</p>
+    <h2>{t('imprint.profession.title')}</h2>
+    <p>
+      <strong>{t('imprint.jobTitle')}:</strong><br />
+      {t('imprint.jobTitleValue')}
+    </p>
+
+    <h3>{t('imprint.authority.title')}</h3>
+    <p>
+      {a.name}<br />
+      {a.street}<br />
+      {a.zip}&nbsp;{a.city}<br />
+      {isDe ? 'Telefon' : 'Phone'}: <a href={`tel:${a.phone.replace(/[\s-]/g, '')}`}>{a.phone}</a><br />
+      {isDe ? 'E-Mail' : 'E-mail'}: <a href={`mailto:${a.email}`}>{a.email}</a>
+    </p>
+
+    <h3>{t('imprint.rules.title')}</h3>
+    <ul>
+      <li>{t('imprint.rules.li1')}</li>
+      <li>{t('imprint.rules.li2')}</li>
+      <li>{t('imprint.rules.li3')}</li>
+    </ul>
+    <p>{t('imprint.rules.note')}</p>
 
     <h2>{t('imprint.responsible')}</h2>
     <p>
       {c.name}<br />
-      {c.street}, {c.zip}&nbsp;{c.city}
+      {c.street}<br />
+      {c.zip}&nbsp;{c.city}
     </p>
 
     <h2>{t('imprint.disclaimer.title')}</h2>
