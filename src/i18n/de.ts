@@ -59,32 +59,49 @@ export const de = {
   'contact.instagram': 'Instagram besuchen',
   'contact.maps': 'Auf Google Maps bewerten',
   'contact.consentHint':
-    'Hinweis: Beim Klick auf diese Buttons wirst du zu einem externen Dienst (Meta bzw. Google) weitergeleitet. Erst dann werden Daten an den jeweiligen Anbieter übertragen.',
+    'Hinweis: Bei Klick auf der Karte wirst du zu einem externen Dienst (Meta bzw. Google) weitergeleitet. Erst dann werden Daten an den jeweiligen Anbieter übertragen.',
 
   // --- Wissenswertes ---
+  'knowledge.eyebrow': 'Ratgeber',
   'knowledge.title': 'Wissenswertes',
-  'knowledge.subtitle': 'Wichtige Infos rund um die Hebammenbetreuung.',
-  'knowledge.wegegeld.title': 'Hebammen-Suche: Wie weit darf der Weg sein? 🚗💨',
-  'knowledge.wegegeld.intro':
-    'Du suchst eine Hebamme für die Wochenbettbetreuung, wohnst aber etwas außerhalb? Hier ein paar wichtige Informationen rund um das Wegegeld:',
-  'knowledge.wegegeld.b1.title': '📍 Bis 25 km',
+  'knowledge.subtitle':
+    'Hintergründe und Antworten auf häufige Fragen rund um die Hebammenbetreuung – klar und verständlich zusammengefasst.',
+  'knowledge.wegegeld.title': 'Wegegeld: Wie weit darf der Anfahrtsweg sein?',
+  'knowledge.wegegeld.lead':
+    'Sie suchen eine Hebamme für die Wochenbettbetreuung, wohnen aber etwas außerhalb? Die folgenden Hinweise fassen die wichtigsten Regelungen zum Wegegeld zusammen.',
+  'knowledge.wegegeld.toc': 'Auf dieser Seite',
+  // Abschnitt 1
+  'knowledge.wegegeld.b1.label': 'Gesetzlich versichert',
+  'knowledge.wegegeld.b1.title': 'Anfahrt bis 25 Kilometer',
   'knowledge.wegegeld.b1.text':
-    'Bei gesetzlich Versicherten wird das Wegegeld grundsätzlich für eine einfache Wegstrecke von bis zu 25 km übernommen.',
-  'knowledge.wegegeld.b2.title': '🤔 Und wenn du weiter entfernt wohnst?',
+    'Bei gesetzlich Versicherten wird das Wegegeld grundsätzlich für eine einfache Wegstrecke von bis zu 25 Kilometern übernommen.',
+  // Abschnitt 2
+  'knowledge.wegegeld.b2.label': 'Ausnahmen',
+  'knowledge.wegegeld.b2.title': 'Wenn Sie weiter entfernt wohnen',
   'knowledge.wegegeld.b2.text':
-    'In bestimmten Ausnahmefällen kann das Wegegeld auch für eine längere Strecke bis maximal 50 km einfache Wegstrecke abgerechnet werden – zum Beispiel:',
-  'knowledge.wegegeld.b2.li1': 'wenn keine andere Hebamme verfügbar ist',
-  'knowledge.wegegeld.b2.li2': 'bei einem Vertretungsfall',
+    'In bestimmten Ausnahmefällen kann das Wegegeld auch für eine längere Strecke von bis zu 50 Kilometern einfacher Wegstrecke abgerechnet werden – zum Beispiel:',
+  'knowledge.wegegeld.b2.li1': 'wenn keine andere Hebamme verfügbar ist,',
+  'knowledge.wegegeld.b2.li2': 'oder in einem Vertretungsfall.',
   'knowledge.wegegeld.b2.note':
     'Die Voraussetzungen für die Abrechnung der längeren Strecke müssen dabei erfüllt und entsprechend begründet werden.',
-  'knowledge.wegegeld.b3.title': '🏥 Du bist privat versichert?',
+  // Abschnitt 3
+  'knowledge.wegegeld.b3.label': 'Privat versichert',
+  'knowledge.wegegeld.b3.title': 'Als Privatversicherte',
   'knowledge.wegegeld.b3.text':
-    'Auch als Privatversicherte kannst du Hebammenhilfe in Anspruch nehmen. Die Kostenübernahme richtet sich nach deinem individuellen Versicherungsvertrag und -tarif. Bitte kläre daher am besten vor Beginn der Betreuung mit deiner privaten Krankenversicherung, welche Leistungen und Fahrtkosten übernommen werden.',
-  'knowledge.wegegeld.b4.title': '🗺️ Du bist unsicher, ob du in meinem Betreuungsgebiet liegst?',
+    'Auch als Privatversicherte können Sie Hebammenhilfe in Anspruch nehmen. Die Kostenübernahme richtet sich nach Ihrem individuellen Versicherungsvertrag und -tarif. Klären Sie daher am besten vor Beginn der Betreuung mit Ihrer privaten Krankenversicherung, welche Leistungen und Fahrtkosten übernommen werden.',
+  // Abschnitt 4
+  'knowledge.wegegeld.b4.label': 'Betreuungsgebiet',
+  'knowledge.wegegeld.b4.title': 'Unsicher, ob Sie im Gebiet liegen?',
   'knowledge.wegegeld.b4.text':
-    'Schreib mir einfach deine PLZ oder deinen Wohnort, dann können wir gemeinsam schauen, ob eine Betreuung möglich ist. 🤗',
+    'Senden Sie mir einfach Ihre Postleitzahl oder Ihren Wohnort – gemeinsam schauen wir dann, ob eine Betreuung möglich ist.',
   'knowledge.wegegeld.source':
-    'Quelle: Hebammenhilfevertrag nach § 134a SGB V, gültig ab dem 01.04.2026',
+    'Quelle: Hebammenhilfevertrag nach § 134a SGB V, gültig ab dem 1. April 2026.',
+  // Karten-Abschnitt
+  'knowledge.map.label': 'Betreuungsgebiet',
+  'knowledge.map.title': 'Mein Betreuungsgebiet auf einen Blick',
+  'knowledge.map.text':
+    'Das markierte Gebiet rund um Meuselwitz zeigt, wo ich werdende und frischgebackene Familien begleite.',
+  'knowledge.map.cta': 'In Google Maps öffnen',
 
   // --- Footer ---
   'footer.contact': 'Kontakt',

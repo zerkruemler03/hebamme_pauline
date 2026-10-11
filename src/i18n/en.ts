@@ -61,32 +61,44 @@ export const en: Record<keyof typeof de, string> = {
   'contact.instagram': 'Visit Instagram',
   'contact.maps': 'Review on Google Maps',
   'contact.consentHint':
-    'Note: clicking these buttons takes you to an external service (Meta or Google). Only then is data transferred to the respective provider.',
+    'Note: Clicking the map takes you to an external service (Meta or Google). Only then is data transferred to the respective provider.',
 
   // --- Good to know ---
+  'knowledge.eyebrow': 'Guide',
   'knowledge.title': 'Good to know',
-  'knowledge.subtitle': 'Important information about midwife care.',
-  'knowledge.wegegeld.title': 'Finding a midwife: how far may the journey be? 🚗💨',
-  'knowledge.wegegeld.intro':
-    'Looking for a midwife for postnatal care but living a little further out? Here is some important information about travel allowance (Wegegeld):',
-  'knowledge.wegegeld.b1.title': '📍 Up to 25 km',
+  'knowledge.subtitle':
+    'Background information and answers to common questions about midwife care – summarised clearly and simply.',
+  'knowledge.wegegeld.title': 'Travel allowance: how far may the journey be?',
+  'knowledge.wegegeld.lead':
+    'Looking for a midwife for postnatal care but living a little further out? The following notes summarise the key rules on travel allowance (Wegegeld).',
+  'knowledge.wegegeld.toc': 'On this page',
+  'knowledge.wegegeld.b1.label': 'Statutory insurance',
+  'knowledge.wegegeld.b1.title': 'Journeys up to 25 kilometres',
   'knowledge.wegegeld.b1.text':
-    'For people with statutory health insurance, the travel allowance is generally covered for a one-way distance of up to 25 km.',
-  'knowledge.wegegeld.b2.title': '🤔 And if you live further away?',
+    'For people with statutory health insurance, the travel allowance is generally covered for a one-way distance of up to 25 kilometres.',
+  'knowledge.wegegeld.b2.label': 'Exceptions',
+  'knowledge.wegegeld.b2.title': 'If you live further away',
   'knowledge.wegegeld.b2.text':
-    'In certain exceptional cases, the travel allowance can also be billed for a longer one-way distance of up to 50 km – for example:',
-  'knowledge.wegegeld.b2.li1': 'if no other midwife is available',
-  'knowledge.wegegeld.b2.li2': 'in the case of a substitution',
+    'In certain exceptional cases, the travel allowance can also be billed for a longer one-way distance of up to 50 kilometres – for example:',
+  'knowledge.wegegeld.b2.li1': 'if no other midwife is available,',
+  'knowledge.wegegeld.b2.li2': 'or in the case of a substitution.',
   'knowledge.wegegeld.b2.note':
     'The requirements for billing the longer distance must be met and justified accordingly.',
-  'knowledge.wegegeld.b3.title': '🏥 Are you privately insured?',
+  'knowledge.wegegeld.b3.label': 'Private insurance',
+  'knowledge.wegegeld.b3.title': 'As a privately insured person',
   'knowledge.wegegeld.b3.text':
     'As a privately insured person, you can also make use of midwife care. Coverage depends on your individual insurance contract and tariff. Please clarify with your private health insurer before the care begins which services and travel costs are covered.',
-  'knowledge.wegegeld.b4.title': '🗺️ Not sure whether you live within my service area?',
+  'knowledge.wegegeld.b4.label': 'Service area',
+  'knowledge.wegegeld.b4.title': 'Not sure whether you live within the area?',
   'knowledge.wegegeld.b4.text':
-    'Just send me your postal code or your place of residence and we can check together whether care is possible. 🤗',
+    'Simply send me your postal code or your place of residence – together we can then check whether care is possible.',
   'knowledge.wegegeld.source':
-    'Source: Midwifery care agreement under § 134a SGB V, valid from 01 April 2026',
+    'Source: Midwifery care agreement under § 134a SGB V, valid from 1 April 2026.',
+  'knowledge.map.label': 'Service area',
+  'knowledge.map.title': 'My service area at a glance',
+  'knowledge.map.text':
+    'The highlighted area around Meuselwitz shows where I accompany expectant and new families.',
+  'knowledge.map.cta': 'Open in Google Maps',
 
   // --- Footer ---
   'footer.contact': 'Contact',

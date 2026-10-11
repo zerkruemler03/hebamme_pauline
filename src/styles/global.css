@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import './components.css';
+@import './knowledge.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 

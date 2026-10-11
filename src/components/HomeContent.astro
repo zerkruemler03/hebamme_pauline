@@ -7,7 +7,7 @@ import slide2 from '../assets/slides/slide-2.svg';
 import slide3 from '../assets/slides/slide-3.svg';
 import slide4 from '../assets/slides/slide-4.svg';
 import { site } from '../data/site';
-import { localePath, useTranslations, type Locale } from '../i18n/utils';
+import { useTranslations, type Locale } from '../i18n/utils';
 import ImageSlider from './ImageSlider.svelte';
 import Icon from './Icon.astro';
 import Section from './Section.astro';
@@ -28,10 +28,10 @@ const slides = [
 ];
 
 const services = [
-  { icon: '🤰', title: t('services.pregnancy.title'), text: t('services.pregnancy.text') },
-  { icon: '🌸', title: t('services.birth.title'), text: t('services.birth.text') },
-  { icon: '👶', title: t('services.postnatal.title'), text: t('services.postnatal.text') },
-  { icon: '🤱', title: t('services.counseling.title'), text: t('services.counseling.text') },
+  { title: t('services.pregnancy.title'), text: t('services.pregnancy.text') },
+  { title: t('services.birth.title'), text: t('services.birth.text') },
+  { title: t('services.postnatal.title'), text: t('services.postnatal.text') },
+  { title: t('services.counseling.title'), text: t('services.counseling.text') },
 ];
 ---
 
@@ -46,7 +46,6 @@ const services = [
     </div>
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="#kontakt" class="btn-primary">{t('hero.cta.contact')}</a>
-      <a href={localePath('/wissenswertes', locale)} class="btn-secondary">{t('hero.cta.knowledge')}</a>
     </div>
     <!-- Social-Icons oben -->
     <div class="flex items-center gap-3 pt-2">
@@ -77,8 +76,7 @@ const services = [
     {
       services.map((s) => (
         <article class="card min-w-0">
-          <span class="text-4xl" aria-hidden="true">{s.icon}</span>
-          <h3 class="mt-4 text-xl">{s.title}</h3>
+          <h3 class="text-xl">{s.title}</h3>
           <p class="mt-2 text-[var(--color-text-secondary)]">{s.text}</p>
         </article>
       ))
@@ -119,65 +117,3 @@ const services = [
     <p class="mt-6 text-sm text-[var(--color-text-secondary)]">{t('contact.consentHint')}</p>
   </div>
 </Section>
-
-<style>
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.85rem 1.75rem;
-    border-radius: var(--radius-full);
-    background: var(--color-accent);
-    color: var(--color-text-inverse);
-    font-weight: 700;
-    text-decoration: none;
-    transition:
-      background-color var(--transition-fast),
-      transform var(--transition-fast);
-  }
-
-  .btn-primary:hover {
-    background: var(--color-accent-hover);
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.85rem 1.75rem;
-    border-radius: var(--radius-full);
-    border: 1px solid var(--color-border-secondary);
-    background: transparent;
-    color: var(--color-text);
-    font-weight: 700;
-    text-decoration: none;
-    transition:
-      background-color var(--transition-fast),
-      border-color var(--transition-fast),
-      transform var(--transition-fast);
-  }
-
-  .btn-secondary:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-    transform: translateY(-2px);
-  }
-
-  .card {
-    padding: 2rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
-    background: var(--color-surface);
-    transition:
-      transform var(--transition-fast),
-      box-shadow var(--transition-fast),
-      border-color var(--transition-fast);
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--color-accent);
-  }
-</style>
