@@ -3,10 +3,8 @@ import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://zerkruemler03.github.io',
-  base: '/hebamme_pauline',
+  site: 'https://hebamme-pauline-salva.pages.dev',
 
   i18n: {
     defaultLocale: 'de',
