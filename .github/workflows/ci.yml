@@ -1,7 +1,5 @@
 name: CI
 
-# Prueft jeden Pull Request auf master (und Pushes auf master als Absicherung).
-# Nur Qualitaetssicherung – das Deployment uebernimmt Cloudflare Pages separat.
 on:
   pull_request:
     branches: [master]
