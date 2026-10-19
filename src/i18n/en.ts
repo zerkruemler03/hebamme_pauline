@@ -55,6 +55,19 @@ export const en: Record<keyof typeof de, string> = {
   'services.counseling.text':
     'Individual advice on breastfeeding and nutrition – for a relaxed start as a family.',
 
+  // --- Why choose me ---
+  'why.title': 'Why choose me?',
+  'why.subtitle': 'What you can expect from my care.',
+  'why.individual.title': 'Individual care',
+  'why.individual.text':
+    'Every family is unique. That’s why I want to meet you where you are and make the decisions that suit you together with you. I want to give you knowledge and confidence so you can find your own path as a family.',
+  'why.professional.title': 'Professional & empathetic',
+  'why.professional.text':
+    'Through my studies in midwifery science, I combine current expertise with personal, empathetic care. Especially during pregnancy and the postnatal period, many questions arise. I take the time to listen, take your uncertainties seriously and try to give you clear answers.',
+  'why.trust.title': 'Trust and confidence',
+  'why.trust.text':
+    'A relationship built on trust is, for me, the foundation of good midwife care. I want to give you confidence without taking the decisions away from you.',
+
   // --- Area ---
   'area.title': 'My service area',
   'area.text':

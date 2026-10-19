@@ -53,6 +53,19 @@ export const de = {
   'services.counseling.text':
     'Individuelle Beratung zum Stillen und zur Ernährung – für einen entspannten Start zu dritt.',
 
+  // --- Warum mich wählen ---
+  'why.title': 'Warum mich wählen?',
+  'why.subtitle': 'Was euch in meiner Betreuung erwartet.',
+  'why.individual.title': 'Individuelle Betreuung',
+  'why.individual.text':
+    'Jede Familie ist einzigartig. Deshalb möchte ich euch dort abholen, wo ihr gerade steht, und gemeinsam mit euch die für euch passenden Entscheidungen treffen. Ich möchte euch Wissen und Sicherheit vermitteln, damit ihr euren eigenen Weg als Familie gehen könnt.',
+  'why.professional.title': 'Fachlich & einfühlsam',
+  'why.professional.text':
+    'Durch mein Studium der Hebammenwissenschaft verbinde ich aktuelles Fachwissen mit einer persönlichen und einfühlsamen Betreuung. Gerade in der Schwangerschaft und im Wochenbett entstehen viele Fragen. Ich nehme mir Zeit zuzuhören, nehme eure Unsicherheiten ernst und versuche, euch verständliche Antworten zu geben.',
+  'why.trust.title': 'Vertrauen und Sicherheit',
+  'why.trust.text':
+    'Eine vertrauensvolle Beziehung ist für mich die Grundlage einer guten Hebammenbetreuung. Ich möchte euch Sicherheit geben, ohne euch dabei Entscheidungen abzunehmen.',
+
   // --- Betreuungsgebiet ---
   'area.title': 'Mein Betreuungsgebiet',
   'area.text':
