@@ -2,12 +2,9 @@
 import { Image } from 'astro:assets';
 import karte from '../assets/img/karte.png';
 import logo from '../assets/img/logo-main.png';
-import slide1 from '../assets/slides/slide-1.svg';
-import slide2 from '../assets/slides/slide-2.svg';
-import slide3 from '../assets/slides/slide-3.svg';
-import slide4 from '../assets/slides/slide-4.svg';
 import { site } from '../data/site';
 import { useTranslations, type Locale } from '../i18n/utils';
+import { loadSlides } from '../utils/slides';
 import ImageSlider from './ImageSlider.svelte';
 import Icon from './Icon.astro';
 import Section from './Section.astro';
@@ -20,12 +17,7 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 
-const slides = [
-  { src: slide1.src, alt: t('slider.alt1') },
-  { src: slide2.src, alt: t('slider.alt2') },
-  { src: slide3.src, alt: t('slider.alt3') },
-  { src: slide4.src, alt: t('slider.alt4') },
-];
+const slides = await loadSlides((i) => t(`slider.alt${i + 1}` as 'slider.alt1'));
 
 const services = [
   { title: t('services.pregnancy.title'), text: t('services.pregnancy.text') },
