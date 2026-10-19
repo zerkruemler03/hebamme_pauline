@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import karte from '../assets/karte.png';
-import logo from '../assets/logo.png';
+import karte from '../assets/img/karte.png';
+import logo from '../assets/img/logo-main.png';
 import slide1 from '../assets/slides/slide-1.svg';
 import slide2 from '../assets/slides/slide-2.svg';
 import slide3 from '../assets/slides/slide-3.svg';
@@ -38,7 +38,7 @@ const services = [
 <section class="relative overflow-hidden">
   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[var(--color-accent-soft)] to-transparent opacity-70"></div>
   <div class="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-4 py-[var(--space-3xl)] text-center sm:px-6">
-    <Image src={logo} alt={t('site.name')} width={180} height={211} class="h-40 w-auto sm:h-48" loading="eager" />
+    <Image src={logo} alt={t('site.name')} width={360} height={485} class="logo-plate h-40 w-40 sm:h-48 sm:w-48" loading="eager" />
     <div class="flex flex-col items-center gap-4">
       <h1 class="max-w-3xl text-4xl sm:text-5xl md:text-6xl">{t('hero.title')}</h1>
       <p class="max-w-2xl text-lg text-[var(--color-text-secondary)] sm:text-xl">{t('hero.subtitle')}</p>
