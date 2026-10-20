@@ -26,10 +26,18 @@ export const en: Record<keyof typeof de, string> = {
   // --- Slider ---
   'slider.prev': 'Previous image',
   'slider.next': 'Next image',
-  'slider.alt1': 'Pregnant woman holding her belly',
-  'slider.alt2': 'Newborn baby sleeping',
-  'slider.alt3': 'Mother holding her baby',
-  'slider.alt4': 'Midwife providing care',
+  'slider.alt1': 'Midwife Pauline with her equipment in the park',
+  'slider.alt2': 'Listening to the baby’s heartbeat with a doppler',
+  'slider.alt3': 'Measuring the belly during a check-up',
+  'slider.alt4': 'Listening with a stethoscope',
+  'slider.alt5': 'Listening to the heartbeat with a Pinard horn',
+  'slider.alt6': 'The midwife’s bag with instruments',
+  'slider.alt7': 'Consultation with an expectant mother',
+  'slider.alt8': 'Listening to the heartbeat – close-up',
+  'slider.alt9': 'Palpating the baby bump',
+  'slider.alt10': 'Listening with a stethoscope – detail',
+  'slider.alt11': 'Listening with a stethoscope from the side',
+  'slider.alt12': 'Baby scale from the midwife’s kit',
 
   // --- Services ---
   'services.title': 'My services',
@@ -46,6 +54,19 @@ export const en: Record<keyof typeof de, string> = {
   'services.counseling.title': 'Breastfeeding & nutrition advice',
   'services.counseling.text':
     'Individual advice on breastfeeding and nutrition – for a relaxed start as a family.',
+
+  // --- Why choose me ---
+  'why.title': 'Why choose me?',
+  'why.subtitle': 'What you can expect from my care.',
+  'why.individual.title': 'Individual care',
+  'why.individual.text':
+    'Every family is unique. That’s why I want to meet you where you are and make the decisions that suit you together with you. I want to give you knowledge and confidence so you can find your own path as a family.',
+  'why.professional.title': 'Professional & empathetic',
+  'why.professional.text':
+    'Through my studies in midwifery science, I combine current expertise with personal, empathetic care. Especially during pregnancy and the postnatal period, many questions arise. I take the time to listen, take your uncertainties seriously and try to give you clear answers.',
+  'why.trust.title': 'Trust and confidence',
+  'why.trust.text':
+    'A relationship built on trust is, for me, the foundation of good midwife care. I want to give you confidence without taking the decisions away from you.',
 
   // --- Area ---
   'area.title': 'My service area',
@@ -72,10 +93,12 @@ export const en: Record<keyof typeof de, string> = {
   'knowledge.wegegeld.lead':
     'Looking for a midwife for postnatal care but living a little further out? The following notes summarise the key rules on travel allowance (Wegegeld).',
   'knowledge.wegegeld.toc': 'On this page',
+
   'knowledge.wegegeld.b1.label': 'Statutory insurance',
   'knowledge.wegegeld.b1.title': 'Journeys up to 25 kilometres',
   'knowledge.wegegeld.b1.text':
     'For people with statutory health insurance, the travel allowance is generally covered for a one-way distance of up to 25 kilometres.',
+
   'knowledge.wegegeld.b2.label': 'Exceptions',
   'knowledge.wegegeld.b2.title': 'If you live further away',
   'knowledge.wegegeld.b2.text':
@@ -84,10 +107,12 @@ export const en: Record<keyof typeof de, string> = {
   'knowledge.wegegeld.b2.li2': 'or in the case of a substitution.',
   'knowledge.wegegeld.b2.note':
     'The requirements for billing the longer distance must be met and justified accordingly.',
+
   'knowledge.wegegeld.b3.label': 'Private insurance',
   'knowledge.wegegeld.b3.title': 'As a privately insured person',
   'knowledge.wegegeld.b3.text':
     'As a privately insured person, you can also make use of midwife care. Coverage depends on your individual insurance contract and tariff. Please clarify with your private health insurer before the care begins which services and travel costs are covered.',
+
   'knowledge.wegegeld.b4.label': 'Service area',
   'knowledge.wegegeld.b4.title': 'Not sure whether you live within the area?',
   'knowledge.wegegeld.b4.text':

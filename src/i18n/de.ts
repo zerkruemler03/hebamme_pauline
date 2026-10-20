@@ -24,10 +24,18 @@ export const de = {
   // --- Slider ---
   'slider.prev': 'Vorheriges Bild',
   'slider.next': 'Nächstes Bild',
-  'slider.alt1': 'Schwangere Frau hält ihren Bauch',
-  'slider.alt2': 'Neugeborenes Baby schläft',
-  'slider.alt3': 'Mutter mit Baby im Arm',
-  'slider.alt4': 'Hebamme bei der Betreuung',
+  'slider.alt1': 'Hebamme Pauline mit ihrer Ausrüstung im Park',
+  'slider.alt2': 'Abhören der kindlichen Herztöne mit dem Dopton',
+  'slider.alt3': 'Messen des Bauchumfangs bei der Vorsorge',
+  'slider.alt4': 'Abhören mit dem Stethoskop',
+  'slider.alt5': 'Abhören der Herztöne mit dem Pinard-Hörrohr',
+  'slider.alt6': 'Die Hebammentasche mit Instrumenten',
+  'slider.alt7': 'Beratungsgespräch mit einer Schwangeren',
+  'slider.alt8': 'Herztöne abhören – Nahaufnahme',
+  'slider.alt9': 'Abtasten des Babybauchs',
+  'slider.alt10': 'Abhören mit dem Stethoskop – Detailaufnahme',
+  'slider.alt11': 'Abhören mit dem Stethoskop von der Seite',
+  'slider.alt12': 'Babywaage aus der Hebammenausstattung',
 
   // --- Leistungen ---
   'services.title': 'Meine Leistungen',
@@ -44,6 +52,19 @@ export const de = {
   'services.counseling.title': 'Still- & Ernährungsberatung',
   'services.counseling.text':
     'Individuelle Beratung zum Stillen und zur Ernährung – für einen entspannten Start zu dritt.',
+
+  // --- Warum mich wählen ---
+  'why.title': 'Warum mich wählen?',
+  'why.subtitle': 'Was euch in meiner Betreuung erwartet.',
+  'why.individual.title': 'Individuelle Betreuung',
+  'why.individual.text':
+    'Jede Familie ist einzigartig. Deshalb möchte ich euch dort abholen, wo ihr gerade steht, und gemeinsam mit euch die für euch passenden Entscheidungen treffen. Ich möchte euch Wissen und Sicherheit vermitteln, damit ihr euren eigenen Weg als Familie gehen könnt.',
+  'why.professional.title': 'Fachlich & einfühlsam',
+  'why.professional.text':
+    'Durch mein Studium der Hebammenwissenschaft verbinde ich aktuelles Fachwissen mit einer persönlichen und einfühlsamen Betreuung. Gerade in der Schwangerschaft und im Wochenbett entstehen viele Fragen. Ich nehme mir Zeit zuzuhören, nehme eure Unsicherheiten ernst und versuche, euch verständliche Antworten zu geben.',
+  'why.trust.title': 'Vertrauen und Sicherheit',
+  'why.trust.text':
+    'Eine vertrauensvolle Beziehung ist für mich die Grundlage einer guten Hebammenbetreuung. Ich möchte euch Sicherheit geben, ohne euch dabei Entscheidungen abzunehmen.',
 
   // --- Betreuungsgebiet ---
   'area.title': 'Mein Betreuungsgebiet',
@@ -70,12 +91,12 @@ export const de = {
   'knowledge.wegegeld.lead':
     'Sie suchen eine Hebamme für die Wochenbettbetreuung, wohnen aber etwas außerhalb? Die folgenden Hinweise fassen die wichtigsten Regelungen zum Wegegeld zusammen.',
   'knowledge.wegegeld.toc': 'Auf dieser Seite',
-  // Abschnitt 1
+
   'knowledge.wegegeld.b1.label': 'Gesetzlich versichert',
   'knowledge.wegegeld.b1.title': 'Anfahrt bis 25 Kilometer',
   'knowledge.wegegeld.b1.text':
     'Bei gesetzlich Versicherten wird das Wegegeld grundsätzlich für eine einfache Wegstrecke von bis zu 25 Kilometern übernommen.',
-  // Abschnitt 2
+
   'knowledge.wegegeld.b2.label': 'Ausnahmen',
   'knowledge.wegegeld.b2.title': 'Wenn Sie weiter entfernt wohnen',
   'knowledge.wegegeld.b2.text':
@@ -84,12 +105,12 @@ export const de = {
   'knowledge.wegegeld.b2.li2': 'oder in einem Vertretungsfall.',
   'knowledge.wegegeld.b2.note':
     'Die Voraussetzungen für die Abrechnung der längeren Strecke müssen dabei erfüllt und entsprechend begründet werden.',
-  // Abschnitt 3
+
   'knowledge.wegegeld.b3.label': 'Privat versichert',
   'knowledge.wegegeld.b3.title': 'Als Privatversicherte',
   'knowledge.wegegeld.b3.text':
     'Auch als Privatversicherte können Sie Hebammenhilfe in Anspruch nehmen. Die Kostenübernahme richtet sich nach Ihrem individuellen Versicherungsvertrag und -tarif. Klären Sie daher am besten vor Beginn der Betreuung mit Ihrer privaten Krankenversicherung, welche Leistungen und Fahrtkosten übernommen werden.',
-  // Abschnitt 4
+
   'knowledge.wegegeld.b4.label': 'Betreuungsgebiet',
   'knowledge.wegegeld.b4.title': 'Unsicher, ob Sie im Gebiet liegen?',
   'knowledge.wegegeld.b4.text':

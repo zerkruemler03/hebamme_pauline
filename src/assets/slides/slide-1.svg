@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Platzhalter Schwangerschaft">
-  <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#f3ddd1"/><stop offset="1" stop-color="#e7c3b2"/></linearGradient></defs>
-  <rect width="1600" height="900" fill="url(#g1)"/>
-  <circle cx="800" cy="430" r="170" fill="#ffffff" opacity="0.45"/>
-  <path d="M800 300c70 0 120 60 120 150s-50 160-120 160-120-70-120-160 50-150 120-150z" fill="#c87a5e" opacity="0.5"/>
-  <text x="800" y="760" font-family="Georgia, serif" font-size="46" fill="#8a5240" text-anchor="middle">Platzhalter · Schwangerschaft</text>
-  <text x="800" y="815" font-family="sans-serif" font-size="26" fill="#a9735e" text-anchor="middle">Bitte durch echtes Foto ersetzen</text>
-</svg>

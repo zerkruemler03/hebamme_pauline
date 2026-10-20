@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/logo.png';
+import logo from '../assets/img/logo-main.png';
 import { getLocaleFromPath, localePath, useTranslations } from '../i18n/utils';
 import { cn } from '../utils/cn';
 import LanguageToggle from './LanguageToggle.astro';
@@ -31,9 +31,9 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
       <Image
         src={logo}
         alt=""
-        width={44}
-        height={52}
-        class="h-11 w-auto"
+        width={88}
+        height={119}
+        class="logo-plate h-11 w-11"
         loading="eager"
       />
       <span class="font-[var(--font-serif)] text-lg font-semibold text-[var(--color-text)] sm:text-xl">
@@ -62,7 +62,6 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
       }
     </ul>
 
-    <!-- Toggles (Desktop) -->
     <div class="ml-2 hidden items-center gap-2 md:flex">
       <LanguageToggle />
       <ThemeToggle

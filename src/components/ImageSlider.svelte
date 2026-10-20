@@ -4,6 +4,7 @@
   interface Slide {
     src: string;
     alt: string;
+    position?: string;
   }
 
   interface Props {
@@ -64,6 +65,7 @@
         class:active={i === current}
         loading={i === 0 ? 'eager' : 'lazy'}
         aria-hidden={i === current ? 'false' : 'true'}
+        style={slide.position ? `object-position: ${slide.position}` : undefined}
       />
     {/each}
   </div>
